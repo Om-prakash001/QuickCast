@@ -1,5 +1,5 @@
 import React from "react";
-import { 
+import {
   Sun, Cloud, CloudRain, CloudSnow, CloudLightning,
   Gauge, Droplets, Wind, Clock
 } from "lucide-react";
@@ -47,7 +47,7 @@ export default function WeatherCard({ weather, units, lastUpdated }) {
 
       {/* Details Row with Icons */}
       <div className="flex flex-col md:flex-row justify-around text-sm text-gray-300 mt-4 gap-4">
-        
+
         {/* Feels Like */}
         <div className="flex items-center gap-2 justify-center">
           <Gauge className="w-5 h-5 text-yellow-300" />
@@ -66,15 +66,17 @@ export default function WeatherCard({ weather, units, lastUpdated }) {
           <p>Wind: {weather.wind?.speed} {units === "metric" ? "m/s" : "mph"}</p>
         </div>
 
+        {/* Last Updated Time */}
+        {lastUpdated && (
+          <p className="text-gray-300 text-xs mt-5 flex justify-center items-center gap-1">
+            <Clock size={14} />
+            Last updated: {lastUpdated}
+          </p>
+        )}
+
       </div>
 
-      {/* Last Updated Time */}
-      {lastUpdated && (
-        <p className="text-gray-300 text-xs mt-5 flex justify-center items-center gap-1">
-          <Clock size={14} />
-          Last updated: {lastUpdated}
-        </p>
-      )}
+
 
     </div>
   );

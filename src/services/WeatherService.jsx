@@ -1,8 +1,5 @@
 export const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY || "";
 
-console.log(import.meta.env.VITE_OPENWEATHER_API_KEY);
-
-
 export async function getWeatherByCity(city, units = "metric") {
 if (!API_KEY) throw new Error("Missing OpenWeather API Key");
 

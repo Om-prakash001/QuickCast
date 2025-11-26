@@ -26,7 +26,7 @@ export default function Header({ units, toggleUnits, useLocation }) {
           className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-xl hover:bg-white/20 transition text-white"
         >
           <MapPin size={18} />
-          <span className="font-semibold">Use my location</span>
+          <span className="font-semibold">Use current location</span>
         </button>
       </div>
     </header>
